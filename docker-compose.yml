@@ -28,6 +28,13 @@ x-environment:
   # Telemetry settings
   ENABLE_TELEMETRY: "${ENABLE_TELEMETRY}"
   # ...your customizations go here
+  SESSION_COOKIE_SECURE: "False"
+  CSRF_COOKIE_SECURE: "False"
+
+  ENABLE_GITHUB_AUTH: "True"
+  GITHUB_API_CLIENT_ID: "github-client-id"
+  GITHUB_API_CLIENT_SECRET: "github-client-secret"
+  PUBLIC_REGISTER_ENABLED: "True"
 
 x-volumes:
   &default-back-volumes
@@ -103,6 +110,9 @@ services:
       TAIGA_WEBSOCKETS_URL: "${WEBSOCKETS_SCHEME}://${TAIGA_DOMAIN}"
       TAIGA_SUBPATH: "${SUBPATH}"
       # ...your customizations go here
+      ENABLE_GITHUB_AUTH: "true"
+      GITHUB_CLIENT_ID: "github-client-id"
+      PUBLIC_REGISTER_ENABLED: "true"
     networks:
       - taiga
     # volumes:
