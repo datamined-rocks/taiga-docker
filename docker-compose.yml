@@ -155,7 +155,7 @@ services:
       - taiga
 
   taiga-gateway:
-    image: nginx:1.25-alpine
+    image: nginx:stable-alpine
     ports:
       - "9000:80"
     volumes:
