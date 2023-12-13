@@ -33,6 +33,10 @@ x-environment:
 
   PUBLIC_REGISTER_ENABLED: "True"
 
+  ENABLE_TRELLO_IMPORTER: "True"
+  TRELLO_IMPORTER_API_KEY: "${TRELLO_IMPORTER_API_KEY}"
+  TRELLO_IMPORTER_SECRET_KEY: "${TRELLO_IMPORTER_SECRET_KEY}"
+
 x-volumes:
   &default-back-volumes
   # These volumens will be used by taiga-back and taiga-async.
@@ -108,6 +112,8 @@ services:
       TAIGA_SUBPATH: "${SUBPATH}"
       # ...your customizations go here
       PUBLIC_REGISTER_ENABLED: "true"
+
+      ENABLE_TRELLO_IMPORTER: "true"
     networks:
       - taiga
     # volumes:
