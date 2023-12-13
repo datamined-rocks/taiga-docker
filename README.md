@@ -3,12 +3,6 @@
 | :exclamation: | We recently announced Taiga plans for the future and they greatly affect how we manage this repository and the current Taiga 6 release. Check it [here](https://blog.taiga.io/announcing_taiganext.html).    |
 |---------------|:----|
 
-| :information_source: | If you're already using taiga-docker, follow this [migration guide](https://docs.taiga.io/upgrades-docker-migrate.html) to use the new `.env` based deployment. |
-|---------------|:----|
-
-> **Note:**
-> You can access the [older docker installation guide](https://docs.taiga.io/setup-production.old.html#setup-prod-with-docker-old) for documentation purposes, intended just for earlier versions of Taiga (prior to ver. 6.6.0)
-
 
 ## Getting Started
 
@@ -24,7 +18,7 @@ Additionally, it's necessary to have familiarity with Docker, docker compose and
 ### Start the application
 
 ```sh
-$ ./launch-all.sh
+$ ./launch-taiga.sh
 ```
 
 After some instants, when the application is started you can proceed to create the superuser with the following script:
@@ -43,14 +37,6 @@ $ ./taiga-manage.sh [COMMAND]
 If you're testing it in your own machine, you can access the application in **http://localhost:9000**. If you're deploying in a server, you'll need to configure hosts and nginx as described later.
 
 ![Taiga screenshot](imgs/taiga.jpg)
-
-As **EXTRA**: the default `launch-all.sh` script comes with [penpot](https://penpot.app), the open-source solution for design and prototyping. The default access for the penpot application is **http://localhost:9001**
-
-It's developed by the same team behind Taiga. If you want to give it a try, you can go to [penpot's github](https://github.com/penpot/penpot) or the [help center](https://help.penpot.app/technical-guide/configuration/) to review its own configuration variables.
-
-![Penpot screenshot](imgs/penpot.jpg)
-
-And finally if you just want to launch Taiga standalone, you can use the `launch-taiga.sh` script instead of the `launch-all.sh`.
 
 ## Documentation
 
