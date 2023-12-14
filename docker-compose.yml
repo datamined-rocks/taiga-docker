@@ -28,16 +28,14 @@ x-environment:
   # Telemetry settings
   ENABLE_TELEMETRY: "${ENABLE_TELEMETRY}"
   # ...your customizations go here
-  SESSION_COOKIE_SECURE: "True"
-  CSRF_COOKIE_SECURE: "True"
+  SESSION_COOKIE_SECURE: "False"
+  CSRF_COOKIE_SECURE: "False"
 
   PUBLIC_REGISTER_ENABLED: "True"
 
   ENABLE_TRELLO_IMPORTER: "True"
   TRELLO_IMPORTER_API_KEY: "${TRELLO_IMPORTER_API_KEY}"
   TRELLO_IMPORTER_SECRET_KEY: "${TRELLO_IMPORTER_SECRET_KEY}"
-
-
 
 x-volumes:
   &default-back-volumes
