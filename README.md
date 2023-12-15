@@ -7,11 +7,11 @@
 ## How to dump and restore database:
 Create by:
 ```shell
-docker exec taiga-docker-taiga-db-1 pg_dump --format=tar --no-acl --no-owner --no-privileges -U <user_name> -h localhost -p 5432 -d taiga > ~/taiga.dump.tar
+docker exec -i taiga-docker-taiga-db-1 pg_dump --format=tar --no-acl --no-owner --no-privileges -U taiga -h localhost -p 5432 -d taiga > <dump_path>
 ```
 > **Database must be created before restoring and must be Fresh** 
 ```shell
-pg_restore -h localhost -p 15432 -U <user_name> -d taiga --no-acl --clean --no-owner --no-privileges  ~/taiga.dump.tar
+docker exec -i taiga-docker-taiga-db-1 pg_restore -h localhost -p 5432 -U taiga -d taiga --format=tar --no-acl --clean --no-owner --no-privileges < <dump_path>
 ```
 ## Getting Started
 
