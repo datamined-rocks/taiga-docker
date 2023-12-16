@@ -28,8 +28,8 @@ x-environment:
   # Telemetry settings
   ENABLE_TELEMETRY: "${ENABLE_TELEMETRY}"
   # ...your customizations go here
-  SESSION_COOKIE_SECURE: "False"
-  CSRF_COOKIE_SECURE: "False"
+  SESSION_COOKIE_SECURE: "True"
+  CSRF_COOKIE_SECURE: "True"
 
   PUBLIC_REGISTER_ENABLED: "True"
 
