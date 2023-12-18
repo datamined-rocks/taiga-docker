@@ -31,7 +31,7 @@ x-environment:
   SESSION_COOKIE_SECURE: "True"
   CSRF_COOKIE_SECURE: "True"
 
-  PUBLIC_REGISTER_ENABLED: "True"
+#  PUBLIC_REGISTER_ENABLED: "True"
 
   ENABLE_TRELLO_IMPORTER: "True"
   TRELLO_IMPORTER_API_KEY: "${TRELLO_IMPORTER_API_KEY}"
@@ -111,7 +111,7 @@ services:
       TAIGA_WEBSOCKETS_URL: "${WEBSOCKETS_SCHEME}://${TAIGA_DOMAIN}"
       TAIGA_SUBPATH: "${SUBPATH}"
       # ...your customizations go here
-      PUBLIC_REGISTER_ENABLED: "true"
+#      PUBLIC_REGISTER_ENABLED: "true"
 
       ENABLE_TRELLO_IMPORTER: "true"
     networks:
