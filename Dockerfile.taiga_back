@@ -1,0 +1,15 @@
+FROM taigaio/taiga-back:latest
+
+RUN rm -f /taiga-back/taiga/projects/admin.py \
+        /taiga-back/taiga/projects/issues/admin.py \
+        /taiga-back/taiga/projects/attachments/admin.py \
+        /taiga-back/taiga/projects/contact/admin.py \
+        /taiga-back/taiga/projects/custom_attributes/admin.py \
+        /taiga-back/taiga/projects/epics/admin.py \
+        /taiga-back/taiga/projects/milestones/admin.py \
+        /taiga-back/taiga/projects/tasks/admin.py \
+        /taiga-back/taiga/projects/userstories/admin.py \
+        /taiga-back/taiga/projects/wiki/admin.py \
+        /taiga-back/taiga/feedback/admin.py \
+        /taiga-back/taiga/external_apps/admin.py \
+        /taiga-back/taiga/auth/token_denylist/admin.py \
