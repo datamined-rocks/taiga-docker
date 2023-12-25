@@ -168,15 +168,15 @@ services:
       - taiga-back
       - taiga-events
 
-  traggo:
-    image: traggo/server:latest
-    ports:
-      - 3030:3030
-    environment:
-      TRAGGO_DEFAULT_USER_NAME: "${TRAGGO_USER}"
-      TRAGGO_DEFAULT_USER_PASS: "${TRAGGO_PASSWORD}"
-    volumes:
-      - traggo-data:/opt/traggo/data
+#  traggo:
+#    image: traggo/server:latest
+#    ports:
+#      - 3030:3030
+#    environment:
+#      TRAGGO_DEFAULT_USER_NAME: "${TRAGGO_USER}"
+#      TRAGGO_DEFAULT_USER_PASS: "${TRAGGO_PASSWORD}"
+#    volumes:
+#      - traggo-data:/opt/traggo/data
 
 volumes:
   taiga-static-data:
@@ -184,7 +184,7 @@ volumes:
   taiga-db-data:
   taiga-async-rabbitmq-data:
   taiga-events-rabbitmq-data:
-  traggo-data:
+#  traggo-data:
 
 networks:
   taiga:
