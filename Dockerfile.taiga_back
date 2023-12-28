@@ -12,4 +12,6 @@ RUN rm -f /taiga-back/taiga/projects/admin.py \
         /taiga-back/taiga/projects/wiki/admin.py \
         /taiga-back/taiga/feedback/admin.py \
         /taiga-back/taiga/external_apps/admin.py \
-        /taiga-back/taiga/auth/token_denylist/admin.py \
+        /taiga-back/taiga/auth/token_denylist/admin.py
+
+COPY users_admin.py /taiga-back/taiga/users/admin.py
